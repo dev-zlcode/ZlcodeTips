@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  ViewAnimation
+//
+//  Created by admin on 2017/11/17.
+//  Copyright © 2017年 admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 屏幕的宽
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+// 屏幕高
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+//iPhoneX判断
+#define iPhoneX (ScreenWidth == 375.f && ScreenHeight == 812.f ? YES : NO)
+//状态栏的高度
+#define StatusBarHeight (iPhoneX ? 44.f : 20.f)
+//导航栏的高度
+#define NavigationBarHeight 44.f
+//信号栏加导航栏的高度
+#define StatusBarAndNavigationBarHeight (StatusBarHeight + NavigationBarHeight)
+//tabar高度
+#define TabbarHeight (iPhoneX ? (49.f+34.f) : 49.f)
+
+// 得到相对视图的坐标
+#define GET_LEFT(view) (view.frame.origin.x)
+#define GET_TOP(view) (view.frame.origin.y)
+#define GET_RIGHT(view) (view.frame.origin.x + view.frame.size.width)
+#define GET_BOTTOM(view) (view.frame.origin.y + view.frame.size.height)
+#define GET_WIDTH(view) (view.frame.size.width)
+#define GET_HEIGHT(view) (view.frame.size.height)
+
+#endif
